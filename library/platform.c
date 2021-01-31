@@ -16,9 +16,6 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-
-#include "common.h"
-
 #if defined(MBEDTLS_PLATFORM_C)
 
 #include "mbedtls/platform.h"

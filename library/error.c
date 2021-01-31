@@ -17,8 +17,6 @@
  *  limitations under the License.
  */
 
-#include "common.h"
-
 #include "mbedtls/error.h"
 
 #if defined(MBEDTLS_ERROR_C) || defined(MBEDTLS_ERROR_STRERROR_DUMMY)

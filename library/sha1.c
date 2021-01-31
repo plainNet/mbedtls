@@ -22,9 +22,6 @@
  *  http://www.itl.nist.gov/fipspubs/fip180-1.htm
  */
 
-#include "common.h"
-
-#if defined(MBEDTLS_SHA1_C)
 
 #include "mbedtls/sha1.h"
 #include "mbedtls/platform_util.h"
@@ -573,4 +570,3 @@ exit:
 
 #endif /* MBEDTLS_SELF_TEST */
 
-#endif /* MBEDTLS_SHA1_C */

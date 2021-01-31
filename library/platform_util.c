@@ -26,8 +26,6 @@
 #define _POSIX_C_SOURCE 200112L
 #endif
 
-#include "common.h"
-
 #include "mbedtls/platform_util.h"
 #include "mbedtls/platform.h"
 #include "mbedtls/threading.h"
