@@ -29,6 +29,9 @@
 #ifndef MBEDTLS_SHA1_H
 #define MBEDTLS_SHA1_H
 
+#include <plainNet.h>
+#if PLAINNET_USE_INNER_MBED_TLS == 1
+
 #include <stddef.h>
 #include <stdint.h>
 
@@ -340,5 +343,7 @@ int mbedtls_sha1_self_test( int verbose );
 #ifdef __cplusplus
 }
 #endif
+
+#endif /* PLAINNET_USE_INNER_MBED_TLS */
 
 #endif /* mbedtls_sha1.h */

@@ -22,6 +22,8 @@
 #ifndef MBEDTLS_BASE64_H
 #define MBEDTLS_BASE64_H
 
+#include <plainNet.h>
+#if PLAINNET_USE_INNER_MBED_TLS == 1
 #include <stddef.h>
 
 #define MBEDTLS_ERR_BASE64_BUFFER_TOO_SMALL               -0x002A  /**< Output buffer too small. */
@@ -86,5 +88,7 @@ int mbedtls_base64_self_test( int verbose );
 #ifdef __cplusplus
 }
 #endif
+
+#endif /* PLAINNET_USE_INNER_MBED_TLS */
 
 #endif /* base64.h */

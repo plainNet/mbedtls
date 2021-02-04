@@ -22,6 +22,9 @@
  * Ensure gmtime_r is available even with -std=c99; must be defined before
  * config.h, which pulls in glibc's features.h. Harmless on other platforms.
  */
+#include <plainNet.h>
+#if PLAINNET_USE_INNER_MBED_TLS == 1
+
 #if !defined(_POSIX_C_SOURCE)
 #define _POSIX_C_SOURCE 200112L
 #endif
@@ -129,3 +132,5 @@ struct tm *mbedtls_platform_gmtime_r( const mbedtls_time_t *tt,
 #endif /* _WIN32 && !EFIX64 && !EFI32 */
 }
 #endif /* MBEDTLS_HAVE_TIME_DATE && MBEDTLS_PLATFORM_GMTIME_R_ALT */
+
+#endif /* PLAINNET_USE_INNER_MBED_TLS */

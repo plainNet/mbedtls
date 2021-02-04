@@ -22,6 +22,9 @@
 #ifndef MBEDTLS_THREADING_H
 #define MBEDTLS_THREADING_H
 
+#include <plainNet.h>
+#if PLAINNET_USE_INNER_MBED_TLS == 1
+
 #include <stdlib.h>
 
 #ifdef __cplusplus
@@ -110,5 +113,7 @@ extern mbedtls_threading_mutex_t mbedtls_threading_gmtime_mutex;
 #ifdef __cplusplus
 }
 #endif
+
+#endif /* PLAINNET_USE_INNER_MBED_TLS */
 
 #endif /* threading.h */

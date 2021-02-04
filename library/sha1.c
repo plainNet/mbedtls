@@ -21,7 +21,8 @@
  *
  *  http://www.itl.nist.gov/fipspubs/fip180-1.htm
  */
-
+#include <plainNet.h>
+#if PLAINNET_USE_INNER_MBED_TLS == 1
 
 #include "mbedtls/sha1.h"
 #include "mbedtls/platform_util.h"
@@ -569,4 +570,6 @@ exit:
 }
 
 #endif /* MBEDTLS_SELF_TEST */
+
+#endif /* PLAINNET_USE_INNER_MBED_TLS */
 

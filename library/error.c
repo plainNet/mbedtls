@@ -17,6 +17,9 @@
  *  limitations under the License.
  */
 
+#include <plainNet.h>
+#if PLAINNET_USE_INNER_MBED_TLS == 1
+
 #include "mbedtls/error.h"
 
 #if defined(MBEDTLS_ERROR_C) || defined(MBEDTLS_ERROR_STRERROR_DUMMY)
@@ -972,3 +975,5 @@ void mbedtls_strerror( int ret, char *buf, size_t buflen )
 #endif /* MBEDTLS_ERROR_C */
 
 #endif /* MBEDTLS_ERROR_C || MBEDTLS_ERROR_STRERROR_DUMMY */
+
+#endif /* PLAINNET_USE_INNER_MBED_TLS */

@@ -22,6 +22,9 @@
 #ifndef MBEDTLS_ERROR_H
 #define MBEDTLS_ERROR_H
 
+#include <plainNet.h>
+#if PLAINNET_USE_INNER_MBED_TLS == 1
+
 #include <stddef.h>
 
 /**
@@ -152,5 +155,7 @@ const char * mbedtls_low_level_strerr( int error_code );
 #ifdef __cplusplus
 }
 #endif
+
+#endif /* PLAINNET_USE_INNER_MBED_TLS */
 
 #endif /* error.h */

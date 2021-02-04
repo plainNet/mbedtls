@@ -17,6 +17,8 @@
  *  limitations under the License.
  */
 
+#include <plainNet.h>
+#if PLAINNET_USE_INNER_MBED_TLS == 1
 
 #include "mbedtls/base64.h"
 
@@ -280,3 +282,5 @@ int mbedtls_base64_self_test( int verbose )
 }
 
 #endif /* MBEDTLS_SELF_TEST */
+
+#endif PLAINNET_USE_INNER_MBED_TLS

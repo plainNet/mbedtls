@@ -31,6 +31,8 @@
 #ifndef MBEDTLS_PLATFORM_H
 #define MBEDTLS_PLATFORM_H
 
+#include <plainNet.h>
+#if PLAINNET_USE_INNER_MBED_TLS == 1
 
 #if defined(MBEDTLS_HAVE_TIME)
 #include "mbedtls/platform_time.h"
@@ -408,5 +410,7 @@ void mbedtls_platform_teardown( mbedtls_platform_context *ctx );
 #ifdef __cplusplus
 }
 #endif
+
+#endif /* PLAINNET_USE_INNER_MBED_TLS */
 
 #endif /* platform.h */

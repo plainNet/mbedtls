@@ -21,6 +21,9 @@
  * Ensure gmtime_r is available even with -std=c99; must be defined before
  * config.h, which pulls in glibc's features.h. Harmless on other platforms.
  */
+#include <plainNet.h>
+#if PLAINNET_USE_INNER_MBED_TLS == 1
+
 #if !defined(_POSIX_C_SOURCE)
 #define _POSIX_C_SOURCE 200112L
 #endif
@@ -177,3 +180,5 @@ mbedtls_threading_mutex_t mbedtls_threading_gmtime_mutex MUTEX_INIT;
 #endif
 
 #endif /* MBEDTLS_THREADING_C */
+
+#endif /* PLAINNET_USE_INNER_MBED_TLS */

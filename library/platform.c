@@ -16,6 +16,9 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
+#include <plainNet.h>
+#if PLAINNET_USE_INNER_MBED_TLS == 1
+
 #if defined(MBEDTLS_PLATFORM_C)
 
 #include "mbedtls/platform.h"
@@ -381,3 +384,5 @@ void mbedtls_platform_teardown( mbedtls_platform_context *ctx )
 #endif /* MBEDTLS_PLATFORM_SETUP_TEARDOWN_ALT */
 
 #endif /* MBEDTLS_PLATFORM_C */
+
+#endif /* PLAINNET_USE_INNER_MBED_TLS */

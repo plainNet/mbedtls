@@ -23,6 +23,9 @@
 #ifndef MBEDTLS_PLATFORM_UTIL_H
 #define MBEDTLS_PLATFORM_UTIL_H
 
+#include <plainNet.h>
+#if PLAINNET_USE_INNER_MBED_TLS == 1
+
 #include <stddef.h>
 #if defined(MBEDTLS_HAVE_TIME_DATE)
 #include "mbedtls/platform_time.h"
@@ -184,5 +187,7 @@ struct tm *mbedtls_platform_gmtime_r( const mbedtls_time_t *tt,
 #ifdef __cplusplus
 }
 #endif
+
+#endif /* PLAINNET_USE_INNER_MBED_TLS */
 
 #endif /* MBEDTLS_PLATFORM_UTIL_H */
