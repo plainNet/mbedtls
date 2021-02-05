@@ -283,4 +283,4 @@ int mbedtls_base64_self_test( int verbose )
 
 #endif /* MBEDTLS_SELF_TEST */
 
-#endif PLAINNET_USE_INNER_MBED_TLS
+#endif  /* PLAINNET_USE_INNER_MBED_TLS */
